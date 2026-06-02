@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 70;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000001 /* NurseryConnectKeyworkerPadApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000001 /* NurseryConnectKeyworkerPadApp.swift */; };
+		A10000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000002 /* ContentView.swift */; };
+		A10000003 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000003 /* DataModels.swift */; };
+		A10000004 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000004 /* AppState.swift */; };
+		A10000005 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000005 /* Theme.swift */; };
+		A10000006 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000006 /* SampleData.swift */; };
+		A10000007 /* MainNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000007 /* MainNavigationView.swift */; };
+		A10000008 /* ManagerDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000008 /* ManagerDashboardView.swift */; };
+		A10000009 /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000009 /* AnalyticsView.swift */; };
+		A10000010 /* ChildrenListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010 /* ChildrenListView.swift */; };
+		A10000011 /* StaffListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000011 /* StaffListView.swift */; };
+		A10000012 /* IncidentQueueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000012 /* IncidentQueueView.swift */; };
+		A10000013 /* MealPlanningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000013 /* MealPlanningView.swift */; };
+		A10000014 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000014 /* MessagesView.swift */; };
+		A10000015 /* ComplianceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000015 /* ComplianceView.swift */; };
+		A10000016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20000016 /* Assets.xcassets */; };
+		A10000017 /* KeyworkerDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000017 /* KeyworkerDashboardView.swift */; };
+		A10000018 /* AttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000018 /* AttendanceView.swift */; };
+		A10000019 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000019 /* DiaryView.swift */; };
+		A10000020 /* MealLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000020 /* MealLogView.swift */; };
+		A10000021 /* DevelopmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000021 /* DevelopmentView.swift */; };
+		A10000022 /* ReportGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000022 /* ReportGeneratorView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		40265A122FCDF0AE00145C88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A90000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A60000001;
+			remoteInfo = NurseryConnectKeyworkerPad;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		40265A0E2FCDF0AE00145C88 /* NurseryConnectKeyworkerPadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NurseryConnectKeyworkerPadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20000001 /* NurseryConnectKeyworkerPadApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseryConnectKeyworkerPadApp.swift; sourceTree = "<group>"; };
+		A20000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A20000003 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
+		A20000004 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		A20000005 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		A20000006 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		A20000007 /* MainNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationView.swift; sourceTree = "<group>"; };
+		A20000008 /* ManagerDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerDashboardView.swift; sourceTree = "<group>"; };
+		A20000009 /* AnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsView.swift; sourceTree = "<group>"; };
+		A20000010 /* ChildrenListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenListView.swift; sourceTree = "<group>"; };
+		A20000011 /* StaffListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffListView.swift; sourceTree = "<group>"; };
+		A20000012 /* IncidentQueueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentQueueView.swift; sourceTree = "<group>"; };
+		A20000013 /* MealPlanningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlanningView.swift; sourceTree = "<group>"; };
+		A20000014 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
+		A20000015 /* ComplianceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplianceView.swift; sourceTree = "<group>"; };
+		A20000016 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A20000017 /* KeyworkerDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyworkerDashboardView.swift; sourceTree = "<group>"; };
+		A20000018 /* AttendanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceView.swift; sourceTree = "<group>"; };
+		A20000019 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
+		A20000020 /* MealLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealLogView.swift; sourceTree = "<group>"; };
+		A20000021 /* DevelopmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentView.swift; sourceTree = "<group>"; };
+		A20000022 /* ReportGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportGeneratorView.swift; sourceTree = "<group>"; };
+		A30000001 /* NurseryConnectKeyworkerPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NurseryConnectKeyworkerPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		40265A0F2FCDF0AE00145C88 /* NurseryConnectKeyworkerPadTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = NurseryConnectKeyworkerPadTests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40265A0B2FCDF0AE00145C88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A40000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A50000001 = {
+			isa = PBXGroup;
+			children = (
+				A50000002 /* NurseryConnectKeyworkerPad */,
+				40265A0F2FCDF0AE00145C88 /* NurseryConnectKeyworkerPadTests */,
+				A50000010 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A50000002 /* NurseryConnectKeyworkerPad */ = {
+			isa = PBXGroup;
+			children = (
+				A20000001 /* NurseryConnectKeyworkerPadApp.swift */,
+				A20000002 /* ContentView.swift */,
+				A50000003 /* Models */,
+				A50000004 /* Views */,
+				A50000009 /* Utilities */,
+				A20000016 /* Assets.xcassets */,
+			);
+			path = NurseryConnectKeyworkerPad;
+			sourceTree = "<group>";
+		};
+		A50000003 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A20000003 /* DataModels.swift */,
+				A20000004 /* AppState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A50000004 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A50000008 /* Keyworker */,
+				A50000005 /* Manager */,
+				A50000006 /* Staff */,
+				A50000007 /* Shared */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A50000005 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A20000008 /* ManagerDashboardView.swift */,
+				A20000009 /* AnalyticsView.swift */,
+				A20000010 /* ChildrenListView.swift */,
+				A20000012 /* IncidentQueueView.swift */,
+				A20000013 /* MealPlanningView.swift */,
+				A20000014 /* MessagesView.swift */,
+				A20000015 /* ComplianceView.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		A50000006 /* Staff */ = {
+			isa = PBXGroup;
+			children = (
+				A20000011 /* StaffListView.swift */,
+			);
+			path = Staff;
+			sourceTree = "<group>";
+		};
+		A50000007 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A20000007 /* MainNavigationView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A50000008 /* Keyworker */ = {
+			isa = PBXGroup;
+			children = (
+				A20000017 /* KeyworkerDashboardView.swift */,
+				A20000018 /* AttendanceView.swift */,
+				A20000019 /* DiaryView.swift */,
+				A20000020 /* MealLogView.swift */,
+				A20000021 /* DevelopmentView.swift */,
+				A20000022 /* ReportGeneratorView.swift */,
+			);
+			path = Keyworker;
+			sourceTree = "<group>";
+		};
+		A50000009 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A20000005 /* Theme.swift */,
+				A20000006 /* SampleData.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A50000010 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A30000001 /* NurseryConnectKeyworkerPad.app */,
+				40265A0E2FCDF0AE00145C88 /* NurseryConnectKeyworkerPadTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		40265A0D2FCDF0AE00145C88 /* NurseryConnectKeyworkerPadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40265A162FCDF0AE00145C88 /* Build configuration list for PBXNativeTarget "NurseryConnectKeyworkerPadTests" */;
+			buildPhases = (
+				40265A0A2FCDF0AE00145C88 /* Sources */,
+				40265A0B2FCDF0AE00145C88 /* Frameworks */,
+				40265A0C2FCDF0AE00145C88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40265A132FCDF0AE00145C88 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				40265A0F2FCDF0AE00145C88 /* NurseryConnectKeyworkerPadTests */,
+			);
+			name = NurseryConnectKeyworkerPadTests;
+			packageProductDependencies = (
+			);
+			productName = NurseryConnectKeyworkerPadTests;
+			productReference = 40265A0E2FCDF0AE00145C88 /* NurseryConnectKeyworkerPadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A60000001 /* NurseryConnectKeyworkerPad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A80000003 /* Build configuration list for PBXNativeTarget "NurseryConnectKeyworkerPad" */;
+			buildPhases = (
+				A70000001 /* Sources */,
+				A40000001 /* Frameworks */,
+				A70000002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NurseryConnectKeyworkerPad;
+			productName = NurseryConnectKeyworkerPad;
+			productReference = A30000001 /* NurseryConnectKeyworkerPad.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A90000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					40265A0D2FCDF0AE00145C88 = {
+						CreatedOnToolsVersion = 26.2;
+						LastSwiftMigration = 2620;
+						TestTargetID = A60000001;
+					};
+					A60000001 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = A80000001 /* Build configuration list for PBXProject "NurseryConnectKeyworkerPad" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A50000001;
+			productRefGroup = A50000010 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A60000001 /* NurseryConnectKeyworkerPad */,
+				40265A0D2FCDF0AE00145C88 /* NurseryConnectKeyworkerPadTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40265A0C2FCDF0AE00145C88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A70000002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000016 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40265A0A2FCDF0AE00145C88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A70000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000001 /* NurseryConnectKeyworkerPadApp.swift in Sources */,
+				A10000002 /* ContentView.swift in Sources */,
+				A10000003 /* DataModels.swift in Sources */,
+				A10000004 /* AppState.swift in Sources */,
+				A10000005 /* Theme.swift in Sources */,
+				A10000006 /* SampleData.swift in Sources */,
+				A10000007 /* MainNavigationView.swift in Sources */,
+				A10000008 /* ManagerDashboardView.swift in Sources */,
+				A10000009 /* AnalyticsView.swift in Sources */,
+				A10000010 /* ChildrenListView.swift in Sources */,
+				A10000011 /* StaffListView.swift in Sources */,
+				A10000012 /* IncidentQueueView.swift in Sources */,
+				A10000013 /* MealPlanningView.swift in Sources */,
+				A10000014 /* MessagesView.swift in Sources */,
+				A10000015 /* ComplianceView.swift in Sources */,
+				A10000017 /* KeyworkerDashboardView.swift in Sources */,
+				A10000018 /* AttendanceView.swift in Sources */,
+				A10000019 /* DiaryView.swift in Sources */,
+				A10000020 /* MealLogView.swift in Sources */,
+				A10000021 /* DevelopmentView.swift in Sources */,
+				A10000022 /* ReportGeneratorView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		40265A132FCDF0AE00145C88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A60000001 /* NurseryConnectKeyworkerPad */;
+			targetProxy = 40265A122FCDF0AE00145C88 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		40265A142FCDF0AE00145C88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sophiesun.NurseryConnectKeyworkerPadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NurseryConnectKeyworkerPad.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NurseryConnectKeyworkerPad";
+			};
+			name = Debug;
+		};
+		40265A152FCDF0AE00145C88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sophiesun.NurseryConnectKeyworkerPadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NurseryConnectKeyworkerPad.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NurseryConnectKeyworkerPad";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A80000001D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A80000001R /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		A80000003D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = NurseryConnect;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Authenticate to access the NurseryConnect Manager Dashboard";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nurseryconnect.pad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		A80000003R /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = NurseryConnect;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Authenticate to access the NurseryConnect Manager Dashboard";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nurseryconnect.pad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40265A162FCDF0AE00145C88 /* Build configuration list for PBXNativeTarget "NurseryConnectKeyworkerPadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40265A142FCDF0AE00145C88 /* Debug */,
+				40265A152FCDF0AE00145C88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A80000001 /* Build configuration list for PBXProject "NurseryConnectKeyworkerPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A80000001D /* Debug */,
+				A80000001R /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A80000003 /* Build configuration list for PBXNativeTarget "NurseryConnectKeyworkerPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A80000003D /* Debug */,
+				A80000003R /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A90000001 /* Project object */;
+}

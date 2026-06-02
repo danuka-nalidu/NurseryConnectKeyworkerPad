@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 70;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11D868D2081B85259163A9B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3613A240F170F37EFDF30FCB /* ContentView.swift */; };
+		261E08BFAE3D4C52CA12338A /* NurseryConnectKeyworkerPadApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA8596F72B917AF75F3165C /* NurseryConnectKeyworkerPadApp.swift */; };
+		5563DDE8D4D02944551884C9 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A563C39EEA6E872253061A69 /* AppState.swift */; };
+		10ACB59360A4DE853947CCCA /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7ED666B950C6C96AD677D /* DataModels.swift */; };
+		5B4EDB51F010E65974DF42C0 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8612617DBBB328247DE14EC8 /* SampleData.swift */; };
+		A7490D10F12E247D8ABC623A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B847C77DD2E9FD974FC9702 /* Theme.swift */; };
+		4D9E14E72F52700076618C94 /* AttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8346E8DF236E07950F0AE296 /* AttendanceView.swift */; };
+		5653BC8B1AE2FEE41E0ED542 /* KeyworkerDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132B539958901DF64B56B96A /* KeyworkerDashboardView.swift */; };
+		00A43B8C7A3FB219EE470998 /* DevelopmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4446B4528A53E7F947B034 /* DevelopmentView.swift */; };
+		07D2157A90C098DFAC09BD59 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18713452A45E7D2F9D1B59A1 /* DiaryView.swift */; };
+		522FAAE867543FBA29343699 /* IncidentDraftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0FF7B24AF20AF2F470806 /* IncidentDraftView.swift */; };
+		7876F544F3B4DBD703D5CCEA /* MealLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10CBFD1C640EF433BB2075 /* MealLogView.swift */; };
+		9FC170842A2F2B79E8742EA3 /* ReportGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B37271A104999C6E737D0B1 /* ReportGeneratorView.swift */; };
+		21BBE7894BC844BB7DC7D09D /* ChildDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEE802464193FAA667E6726 /* ChildDetailView.swift */; };
+		6050B1659A0CD5857B380A5D /* RosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB17F30AAB4AC45C47C77E2 /* RosterView.swift */; };
+		BD4B04A73E361A4019FDE4EA /* AllergenBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A17EFA4C6980807C0A46D1 /* AllergenBanner.swift */; };
+		98DF2A255C992BF3D3EA7092 /* KeyworkerSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E23FEA79240703B6DBC18C7 /* KeyworkerSidebar.swift */; };
+		E80B8E56D6CFE979704BBF76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6162D52C8A2AC8BA7499DE19 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55D5CF93024F2ECDC5FD9E93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08370D4BB112D9E03ED98E4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54B7E720EDA77D735DD32BC6;
+			remoteInfo = NurseryConnectKeyworkerPad;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3613A240F170F37EFDF30FCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6FA8596F72B917AF75F3165C /* NurseryConnectKeyworkerPadApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseryConnectKeyworkerPadApp.swift; sourceTree = "<group>"; };
+		A563C39EEA6E872253061A69 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		75F7ED666B950C6C96AD677D /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
+		8612617DBBB328247DE14EC8 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		4B847C77DD2E9FD974FC9702 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		8346E8DF236E07950F0AE296 /* AttendanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceView.swift; sourceTree = "<group>"; };
+		132B539958901DF64B56B96A /* KeyworkerDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyworkerDashboardView.swift; sourceTree = "<group>"; };
+		9F4446B4528A53E7F947B034 /* DevelopmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentView.swift; sourceTree = "<group>"; };
+		18713452A45E7D2F9D1B59A1 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
+		18D0FF7B24AF20AF2F470806 /* IncidentDraftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentDraftView.swift; sourceTree = "<group>"; };
+		ED10CBFD1C640EF433BB2075 /* MealLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealLogView.swift; sourceTree = "<group>"; };
+		6B37271A104999C6E737D0B1 /* ReportGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportGeneratorView.swift; sourceTree = "<group>"; };
+		DCEE802464193FAA667E6726 /* ChildDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildDetailView.swift; sourceTree = "<group>"; };
+		FBB17F30AAB4AC45C47C77E2 /* RosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterView.swift; sourceTree = "<group>"; };
+		F8A17EFA4C6980807C0A46D1 /* AllergenBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergenBanner.swift; sourceTree = "<group>"; };
+		5E23FEA79240703B6DBC18C7 /* KeyworkerSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyworkerSidebar.swift; sourceTree = "<group>"; };
+		6162D52C8A2AC8BA7499DE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		56815C9278CAFE364B391BF0 /* NurseryConnectKeyworkerPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NurseryConnectKeyworkerPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA9408D4B743D3A36D148F8E /* NurseryConnectKeyworkerPadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NurseryConnectKeyworkerPadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		22D817E91D3A6CEDD9065DA0 /* NurseryConnectKeyworkerPadTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = NurseryConnectKeyworkerPadTests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB0CB03E13A7B44F7F62CDB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D93D7D21BF53857264DA1DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B09A29DAB31FFB6ACAF874C8 = {
+			isa = PBXGroup;
+			children = (
+				278EB5A8C2B6B1AB9C005B92 /* NurseryConnectKeyworkerPad */,
+				22D817E91D3A6CEDD9065DA0 /* NurseryConnectKeyworkerPadTests */,
+				DA33AA9D00055FBBEF7F6E71 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA33AA9D00055FBBEF7F6E71 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56815C9278CAFE364B391BF0 /* NurseryConnectKeyworkerPad.app */,
+				CA9408D4B743D3A36D148F8E /* NurseryConnectKeyworkerPadTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		278EB5A8C2B6B1AB9C005B92 /* NurseryConnectKeyworkerPad */ = {
+			isa = PBXGroup;
+			children = (
+				3613A240F170F37EFDF30FCB /* ContentView.swift */,
+				6FA8596F72B917AF75F3165C /* NurseryConnectKeyworkerPadApp.swift */,
+				1A8D62EC31D729C223701D32 /* Models */,
+				FFE36370E3A2214C4C559326 /* Utilities */,
+				9724D588EDCB72EFDE4F279D /* Views */,
+				6162D52C8A2AC8BA7499DE19 /* Assets.xcassets */,
+			);
+			path = NurseryConnectKeyworkerPad;
+			sourceTree = "<group>";
+		};
+		1A8D62EC31D729C223701D32 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A563C39EEA6E872253061A69 /* AppState.swift */,
+				75F7ED666B950C6C96AD677D /* DataModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FFE36370E3A2214C4C559326 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8612617DBBB328247DE14EC8 /* SampleData.swift */,
+				4B847C77DD2E9FD974FC9702 /* Theme.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9724D588EDCB72EFDE4F279D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				38805C4CC2DBA119EF2B72A2 /* Attendance */,
+				13F9F619267DDB84040F7181 /* Dashboard */,
+				44D3F2FBC46346A7936EC416 /* Development */,
+				1810D31661332591FB3C5D63 /* Diary */,
+				F88887F8E2FB36A0BB4FEB3D /* Incident */,
+				E9B9BABCAB37C7164481D005 /* Meal */,
+				1F5E97978985492D59687E55 /* Reports */,
+				BE48BC513D7A24BDA8EFB5C7 /* Roster */,
+				FD3335A606FF8E61953DDAA7 /* Shared */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		38805C4CC2DBA119EF2B72A2 /* Attendance */ = {
+			isa = PBXGroup;
+			children = (
+				8346E8DF236E07950F0AE296 /* AttendanceView.swift */,
+			);
+			path = Attendance;
+			sourceTree = "<group>";
+		};
+		13F9F619267DDB84040F7181 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				132B539958901DF64B56B96A /* KeyworkerDashboardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		44D3F2FBC46346A7936EC416 /* Development */ = {
+			isa = PBXGroup;
+			children = (
+				9F4446B4528A53E7F947B034 /* DevelopmentView.swift */,
+			);
+			path = Development;
+			sourceTree = "<group>";
+		};
+		1810D31661332591FB3C5D63 /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				18713452A45E7D2F9D1B59A1 /* DiaryView.swift */,
+			);
+			path = Diary;
+			sourceTree = "<group>";
+		};
+		F88887F8E2FB36A0BB4FEB3D /* Incident */ = {
+			isa = PBXGroup;
+			children = (
+				18D0FF7B24AF20AF2F470806 /* IncidentDraftView.swift */,
+			);
+			path = Incident;
+			sourceTree = "<group>";
+		};
+		E9B9BABCAB37C7164481D005 /* Meal */ = {
+			isa = PBXGroup;
+			children = (
+				ED10CBFD1C640EF433BB2075 /* MealLogView.swift */,
+			);
+			path = Meal;
+			sourceTree = "<group>";
+		};
+		1F5E97978985492D59687E55 /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+				6B37271A104999C6E737D0B1 /* ReportGeneratorView.swift */,
+			);
+			path = Reports;
+			sourceTree = "<group>";
+		};
+		BE48BC513D7A24BDA8EFB5C7 /* Roster */ = {
+			isa = PBXGroup;
+			children = (
+				DCEE802464193FAA667E6726 /* ChildDetailView.swift */,
+				FBB17F30AAB4AC45C47C77E2 /* RosterView.swift */,
+			);
+			path = Roster;
+			sourceTree = "<group>";
+		};
+		FD3335A606FF8E61953DDAA7 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F8A17EFA4C6980807C0A46D1 /* AllergenBanner.swift */,
+				5E23FEA79240703B6DBC18C7 /* KeyworkerSidebar.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		54B7E720EDA77D735DD32BC6 /* NurseryConnectKeyworkerPad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 256885CACFC97FC7190E2044 /* Build configuration list for PBXNativeTarget "NurseryConnectKeyworkerPad" */;
+			buildPhases = (
+				F3D878AA112D1B8D4D30599C /* Sources */,
+				DB0CB03E13A7B44F7F62CDB2 /* Frameworks */,
+				69DCDBD4A533DD3A90410003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NurseryConnectKeyworkerPad;
+			productName = NurseryConnectKeyworkerPad;
+			productReference = 56815C9278CAFE364B391BF0 /* NurseryConnectKeyworkerPad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		165C597015AFB0C754214BBB /* NurseryConnectKeyworkerPadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7900E095B4AE9D8A2B760318 /* Build configuration list for PBXNativeTarget "NurseryConnectKeyworkerPadTests" */;
+			buildPhases = (
+				16F00A7DA745BBEFCC5D1DE0 /* Sources */,
+				0D93D7D21BF53857264DA1DA /* Frameworks */,
+				03E9374EAE7902A74E2D8504 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D16E13284B6E70866E5E6A9 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				22D817E91D3A6CEDD9065DA0 /* NurseryConnectKeyworkerPadTests */,
+			);
+			name = NurseryConnectKeyworkerPadTests;
+			productName = NurseryConnectKeyworkerPadTests;
+			productReference = CA9408D4B743D3A36D148F8E /* NurseryConnectKeyworkerPadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08370D4BB112D9E03ED98E4B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					54B7E720EDA77D735DD32BC6 = { CreatedOnToolsVersion = 16.0; };
+					165C597015AFB0C754214BBB = { CreatedOnToolsVersion = 16.0; TestTargetID = 54B7E720EDA77D735DD32BC6; };
+				};
+			};
+			buildConfigurationList = 358D66D8442749B91CD57A29 /* Build configuration list for PBXProject "NurseryConnectKeyworkerPad" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B09A29DAB31FFB6ACAF874C8;
+			productRefGroup = DA33AA9D00055FBBEF7F6E71 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				54B7E720EDA77D735DD32BC6 /* NurseryConnectKeyworkerPad */,
+				165C597015AFB0C754214BBB /* NurseryConnectKeyworkerPadTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69DCDBD4A533DD3A90410003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E80B8E56D6CFE979704BBF76 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03E9374EAE7902A74E2D8504 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3D878AA112D1B8D4D30599C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11D868D2081B85259163A9B3 /* ContentView.swift in Sources */,
+				261E08BFAE3D4C52CA12338A /* NurseryConnectKeyworkerPadApp.swift in Sources */,
+				5563DDE8D4D02944551884C9 /* AppState.swift in Sources */,
+				10ACB59360A4DE853947CCCA /* DataModels.swift in Sources */,
+				5B4EDB51F010E65974DF42C0 /* SampleData.swift in Sources */,
+				A7490D10F12E247D8ABC623A /* Theme.swift in Sources */,
+				4D9E14E72F52700076618C94 /* AttendanceView.swift in Sources */,
+				5653BC8B1AE2FEE41E0ED542 /* KeyworkerDashboardView.swift in Sources */,
+				00A43B8C7A3FB219EE470998 /* DevelopmentView.swift in Sources */,
+				07D2157A90C098DFAC09BD59 /* DiaryView.swift in Sources */,
+				522FAAE867543FBA29343699 /* IncidentDraftView.swift in Sources */,
+				7876F544F3B4DBD703D5CCEA /* MealLogView.swift in Sources */,
+				9FC170842A2F2B79E8742EA3 /* ReportGeneratorView.swift in Sources */,
+				21BBE7894BC844BB7DC7D09D /* ChildDetailView.swift in Sources */,
+				6050B1659A0CD5857B380A5D /* RosterView.swift in Sources */,
+				BD4B04A73E361A4019FDE4EA /* AllergenBanner.swift in Sources */,
+				98DF2A255C992BF3D3EA7092 /* KeyworkerSidebar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16F00A7DA745BBEFCC5D1DE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8D16E13284B6E70866E5E6A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54B7E720EDA77D735DD32BC6 /* NurseryConnectKeyworkerPad */;
+			targetProxy = 55D5CF93024F2ECDC5FD9E93 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		15855D77FA033B232D3B3D82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				SWIFT_VERSION = 5.0;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ( "DEBUG=1", "$(inherited)", );
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE97B8DF8CA0A99630B756BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				SWIFT_VERSION = 5.0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		78B6B3FC03F4F28CEB436170 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "NurseryConnect";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				LD_RUNPATH_SEARCH_PATHS = ( "$(inherited)", "@executable_path/Frameworks", );
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nurseryconnect.keyworkerpad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				TARGETED_DEVICE_FAMILY = 2;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+			};
+			name = Debug;
+		};
+		108A7E5BDC161BEA4F8ED923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "NurseryConnect";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				LD_RUNPATH_SEARCH_PATHS = ( "$(inherited)", "@executable_path/Frameworks", );
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nurseryconnect.keyworkerpad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				TARGETED_DEVICE_FAMILY = 2;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+			};
+			name = Release;
+		};
+		DC7F6DDC06C638363B0290D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nurseryconnect.keyworkerpad.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NurseryConnectKeyworkerPad.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NurseryConnectKeyworkerPad";
+			};
+			name = Debug;
+		};
+		9CA58E02960CE9C0F60E9652 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nurseryconnect.keyworkerpad.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NurseryConnectKeyworkerPad.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NurseryConnectKeyworkerPad";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		358D66D8442749B91CD57A29 /* Build configuration list for PBXProject "NurseryConnectKeyworkerPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15855D77FA033B232D3B3D82 /* Debug */,
+				CE97B8DF8CA0A99630B756BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		256885CACFC97FC7190E2044 /* Build configuration list for PBXNativeTarget "NurseryConnectKeyworkerPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78B6B3FC03F4F28CEB436170 /* Debug */,
+				108A7E5BDC161BEA4F8ED923 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7900E095B4AE9D8A2B760318 /* Build configuration list for PBXNativeTarget "NurseryConnectKeyworkerPadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC7F6DDC06C638363B0290D1 /* Debug */,
+				9CA58E02960CE9C0F60E9652 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08370D4BB112D9E03ED98E4B /* Project object */;
+}
