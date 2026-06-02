@@ -72,7 +72,7 @@ enum KeyworkerQuickAction: Identifiable {
 
 @Observable
 class AppState {
-    var keyworkerName: String = "Nuwani Wijerathne"
+    var keyworkerName: String = "Danuka Nalindu"
     var room: String = "Daisy Room"
     var nurseryName: String = "Bright Horizons Nursery — Colombo"
     var selectedSection: KeyworkerSection = .dashboard

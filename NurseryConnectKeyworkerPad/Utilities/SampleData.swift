@@ -9,7 +9,7 @@ enum SampleData {
     }
 
     static func populate(in context: ModelContext) {
-        let keyworker = "Nuwani Wijerathne"
+        let keyworker = "Danuka Nalindu"
         let cal = Calendar.current
         let today = Date()
 

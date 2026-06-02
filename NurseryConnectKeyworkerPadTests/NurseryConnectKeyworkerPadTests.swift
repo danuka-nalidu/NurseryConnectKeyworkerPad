@@ -34,7 +34,7 @@ import SwiftData
     @Test func defaultSectionIsDashboard() {
         let s = AppState()
         #expect(s.selectedSection == .dashboard)
-        #expect(s.keyworkerName == "Nuwani Wijerathne")
+        #expect(s.keyworkerName == "Danuka Nalindu")
     }
     @Test func sectionShortcutsAreUnique() {
         let keys = KeyworkerSection.allCases.map { $0.shortcutKey }
