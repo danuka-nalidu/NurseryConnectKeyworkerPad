@@ -7,26 +7,15 @@ struct AttendanceView: View {
     @Query(sort: \Child.fullName) private var allChildren: [Child]
     @Query(sort: \AttendanceRecord.date, order: .reverse) private var records: [AttendanceRecord]
 
-    @State private var searchText = ""
-
-    private var myChildren: [Child] {
-        allChildren.filter { $0.keyworkerName == appState.currentUserName }
-    }
-
-    private var filteredChildren: [Child] {
-        if searchText.isEmpty { return myChildren }
-        return myChildren.filter { $0.fullName.localizedCaseInsensitiveContains(searchText) }
-    }
-
-    private var checkedInCount: Int { myChildren.filter { $0.isCheckedIn }.count }
+    @State private var vm = AttendanceViewModel(keyworkerName: "")
 
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
                 HStack(spacing: 20) {
-                    summaryCard("Present", value: "\(checkedInCount)", total: myChildren.count, color: .green)
-                    summaryCard("Absent",  value: "\(myChildren.count - checkedInCount)", total: myChildren.count, color: .red)
-                    summaryCard("Total",   value: "\(myChildren.count)", total: myChildren.count, color: AppPalette.primary)
+                    summaryCard("Present", value: "\(vm.checkedInCount(from: allChildren))", total: vm.myChildren(from: allChildren).count, color: .green)
+                    summaryCard("Absent",  value: "\(vm.myChildren(from: allChildren).count - vm.checkedInCount(from: allChildren))", total: vm.myChildren(from: allChildren).count, color: .red)
+                    summaryCard("Total",   value: "\(vm.myChildren(from: allChildren).count)", total: vm.myChildren(from: allChildren).count, color: AppPalette.primary)
                 }
                 .padding(.horizontal, 24)
 
@@ -35,14 +24,18 @@ struct AttendanceView: View {
                         Text("Today's Register")
                             .font(.system(size: 18, weight: .bold))
                         Spacer()
-                        TextField("Search…", text: $searchText)
+                        TextField("Search…", text: $vm.searchText)
                             .textFieldStyle(.roundedBorder)
                             .frame(width: 220)
                     }
 
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
-                        ForEach(filteredChildren) { child in
-                            AttendanceChildCard(child: child) { toggleAttendance(child: child) }
+                        ForEach(vm.filteredChildren(from: allChildren)) { child in
+                            AttendanceChildCard(child: child) {
+                                withAnimation(.spring(response: 0.3)) {
+                                    vm.toggleAttendance(child: child, records: records, context: modelContext)
+                                }
+                            }
                         }
                     }
                 }
@@ -55,6 +48,8 @@ struct AttendanceView: View {
         }
         .background(AppPalette.background)
         .navigationTitle("Attendance — \(Date().dayMonthString)")
+        .onAppear { vm.keyworkerName = appState.currentUserName }
+        .onChange(of: appState.currentUserName) { _, new in vm.keyworkerName = new }
     }
 
     private func summaryCard(_ title: String, value: String, total: Int, color: Color) -> some View {
@@ -65,36 +60,6 @@ struct AttendanceView: View {
         }
         .frame(maxWidth: .infinity)
         .tileStyle()
-    }
-
-    private func toggleAttendance(child: Child) {
-        let today = Calendar.current.startOfDay(for: Date())
-        if child.isCheckedIn {
-            child.isCheckedIn = false
-            child.checkInTime = nil
-            child.checkInBy = ""
-            if let record = records.first(where: { $0.childId == child.id && Calendar.current.isDate($0.date, inSameDayAs: today) }) {
-                record.checkOutTime = Date()
-                record.collectedBy = "Parent"
-            }
-            let entry = DiaryEntry(childId: child.id, childName: child.preferredName, entryType: "checkout",
-                                   description: "\(child.preferredName) checked out at \(Date().timeString)",
-                                   keyworkerName: appState.currentUserName)
-            modelContext.insert(entry)
-        } else {
-            child.isCheckedIn = true
-            child.checkInTime = Date()
-            child.checkInBy = appState.currentUserName
-            let record = AttendanceRecord(childId: child.id, childName: child.fullName)
-            record.checkInTime = Date()
-            record.droppedOffBy = child.parentOneName
-            modelContext.insert(record)
-            let entry = DiaryEntry(childId: child.id, childName: child.preferredName, entryType: "checkin",
-                                   description: "\(child.preferredName) checked in at \(Date().timeString)",
-                                   keyworkerName: appState.currentUserName)
-            modelContext.insert(entry)
-        }
-        try? modelContext.save()
     }
 }
 

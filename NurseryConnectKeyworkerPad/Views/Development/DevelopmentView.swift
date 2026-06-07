@@ -8,10 +8,7 @@ struct DevelopmentView: View {
     @Query(sort: \DiaryEntry.timestamp, order: .reverse) private var allEntries: [DiaryEntry]
 
     @State private var selectedChild: Child?
-
-    private var myChildren: [Child] {
-        allChildren.filter { $0.keyworkerName == appState.currentUserName }
-    }
+    @State private var vm = DevelopmentTrackerViewModel(keyworkerName: "")
 
     private let eyfsAreas = [
         "Communication & Language",
@@ -39,8 +36,8 @@ struct DevelopmentView: View {
                     .padding(.vertical, 12)
                     Divider()
 
-                    List(myChildren, selection: $selectedChild) { child in
-                        DevelopmentChildRow(child: child, entryCount: entriesForChild(child).count)
+                    List(vm.myChildren(from: allChildren), selection: $selectedChild) { child in
+                        DevelopmentChildRow(child: child, entryCount: vm.entriesForChild(child, from: allEntries).count)
                             .tag(child)
                     }
                     .listStyle(.plain)
@@ -48,7 +45,7 @@ struct DevelopmentView: View {
             },
             detail: {
                 if let child = selectedChild {
-                    ChildDevelopmentDetailView(child: child, entries: entriesForChild(child), eyfsAreas: eyfsAreas)
+                    ChildDevelopmentDetailView(child: child, entries: vm.entriesForChild(child, from: allEntries), eyfsAreas: eyfsAreas, vm: vm)
                 } else {
                     ContentUnavailableView(
                         "Select a Child",
@@ -59,10 +56,8 @@ struct DevelopmentView: View {
             }
         )
         .navigationTitle("Development Tracker")
-    }
-
-    private func entriesForChild(_ child: Child) -> [DiaryEntry] {
-        allEntries.filter { $0.childId == child.id }
+        .onAppear { vm.keyworkerName = appState.currentUserName }
+        .onChange(of: appState.currentUserName) { _, new in vm.keyworkerName = new }
     }
 }
 
@@ -97,30 +92,7 @@ struct ChildDevelopmentDetailView: View {
     let child: Child
     let entries: [DiaryEntry]
     let eyfsAreas: [String]
-
-    private func progressForArea(_ area: String) -> Double {
-        let baseProgress = Double(entries.count) / 30.0
-        let milestones = entries.filter { $0.entryType == "milestone" }.count
-        let areaHash = Double(abs(area.hashValue) % 20) / 100.0
-        return min(1.0, max(0.1, baseProgress + Double(milestones) * 0.05 + areaHash))
-    }
-
-    private var activityBreakdown: [(type: String, count: Int)] {
-        let grouped = Dictionary(grouping: entries, by: { $0.entryType })
-        return grouped.map { (type: $0.key, count: $0.value.count) }
-            .sorted { $0.count > $1.count }
-    }
-
-    private var weeklyActivityData: [(week: String, count: Int)] {
-        let calendar = Calendar.current
-        let weeks = ["4w ago", "3w ago", "2w ago", "Last week", "This week"]
-        return weeks.enumerated().map { index, label in
-            let weekStart = calendar.date(byAdding: .weekOfYear, value: -(4 - index), to: Date())!
-            let weekEnd = calendar.date(byAdding: .weekOfYear, value: 1, to: weekStart)!
-            let count = entries.filter { $0.timestamp >= weekStart && $0.timestamp < weekEnd }.count
-            return (week: label, count: count)
-        }
-    }
+    let vm: DevelopmentTrackerViewModel
 
     var body: some View {
         ScrollView {
@@ -149,7 +121,7 @@ struct ChildDevelopmentDetailView: View {
                     Text("EYFS Areas of Learning")
                         .font(.system(size: 16, weight: .bold))
                     ForEach(eyfsAreas, id: \.self) { area in
-                        let progress = progressForArea(area)
+                        let progress = vm.progressForArea(area, entries: entries)
                         VStack(alignment: .leading, spacing: 4) {
                             HStack {
                                 Text(area)
@@ -201,7 +173,7 @@ struct ChildDevelopmentDetailView: View {
             Text("Observation Trend")
                 .font(.system(size: 14, weight: .bold))
             Chart {
-                ForEach(weeklyActivityData, id: \.week) { item in
+                ForEach(vm.weeklyActivityData(entries: entries), id: \.week) { item in
                     LineMark(x: .value("Week", item.week), y: .value("Count", item.count))
                         .foregroundStyle(AppPalette.indigo)
                         .interpolationMethod(.catmullRom)
@@ -222,14 +194,14 @@ struct ChildDevelopmentDetailView: View {
         VStack(alignment: .leading, spacing: 12) {
             Text("Activity Types")
                 .font(.system(size: 14, weight: .bold))
-            if activityBreakdown.isEmpty {
+            if vm.activityBreakdown(entries: entries).isEmpty {
                 Text("No data yet")
                     .font(.system(size: 12))
                     .foregroundStyle(AppPalette.textSecondary)
                     .frame(height: 160)
             } else {
                 Chart {
-                    ForEach(activityBreakdown, id: \.type) { item in
+                    ForEach(vm.activityBreakdown(entries: entries), id: \.type) { item in
                         SectorMark(
                             angle: .value("Count", item.count),
                             innerRadius: .ratio(0.5)

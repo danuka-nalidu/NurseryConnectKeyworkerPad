@@ -8,25 +8,7 @@ struct MealLogView: View {
     @Query(sort: \MealRecord.date, order: .reverse) private var mealRecords: [MealRecord]
     @Query(sort: \MealPlanItem.dayOfWeek) private var mealPlanItems: [MealPlanItem]
 
-    @State private var selectedMealType: String = "lunch"
-    @State private var showLogSheet = false
-
-    private var myChildren: [Child] {
-        allChildren.filter { $0.keyworkerName == appState.currentUserName }
-    }
-
-    private var todaysMeals: [MealRecord] {
-        let today = Calendar.current.startOfDay(for: Date())
-        let ids = Set(myChildren.map { $0.id })
-        return mealRecords.filter { rec in
-            Calendar.current.isDate(rec.date, inSameDayAs: today) && ids.contains(rec.childId)
-        }
-    }
-
-    private var todayDayOfWeek: Int {
-        let weekday = Calendar.current.component(.weekday, from: Date())
-        return max(0, min(4, weekday == 1 ? 4 : weekday - 2))
-    }
+    @State private var vm = MealLogViewModel(keyworkerName: "")
 
     let mealTypes = ["breakfast", "morning_snack", "lunch", "afternoon_snack"]
 
@@ -37,13 +19,13 @@ struct MealLogView: View {
 
                 HStack(spacing: 0) {
                     ForEach(mealTypes, id: \.self) { type in
-                        Button { selectedMealType = type } label: {
-                            Text(mealTypeLabel(type))
+                        Button { vm.selectedMealType = type } label: {
+                            Text(vm.mealTypeLabel(type))
                                 .font(.system(size: 12, weight: .bold))
                                 .frame(maxWidth: .infinity)
                                 .padding(.vertical, 12)
-                                .background(selectedMealType == type ? AppPalette.orange.opacity(0.15) : Color.clear)
-                                .foregroundStyle(selectedMealType == type ? AppPalette.orange : AppPalette.textSecondary)
+                                .background(vm.selectedMealType == type ? AppPalette.orange.opacity(0.15) : Color.clear)
+                                .foregroundStyle(vm.selectedMealType == type ? AppPalette.orange : AppPalette.textSecondary)
                         }
                     }
                 }
@@ -52,17 +34,17 @@ struct MealLogView: View {
 
                 VStack(alignment: .leading, spacing: 12) {
                     HStack {
-                        Text("\(mealTypeLabel(selectedMealType)) — My Children")
+                        Text("\(vm.mealTypeLabel(vm.selectedMealType)) — My Children")
                             .font(.system(size: 16, weight: .bold))
                         Spacer()
-                        Button { showLogSheet = true } label: {
+                        Button { vm.showLogSheet = true } label: {
                             Label("Log Meal", systemImage: "plus.circle.fill")
                                 .font(.system(size: 13, weight: .semibold))
                         }
                     }
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
-                        ForEach(myChildren) { child in
-                            MealChildCard(child: child, mealType: selectedMealType, todaysMeals: todaysMeals)
+                        ForEach(vm.myChildren(from: allChildren)) { child in
+                            MealChildCard(child: child, mealType: vm.selectedMealType, todaysMeals: vm.todaysMeals(from: mealRecords, children: allChildren))
                         }
                     }
                 }
@@ -76,8 +58,10 @@ struct MealLogView: View {
         }
         .background(AppPalette.background)
         .navigationTitle("Meals — \(Date().dayMonthString)")
-        .sheet(isPresented: $showLogSheet) {
-            MealLogFormView(mealType: selectedMealType)
+        .onAppear { vm.keyworkerName = appState.currentUserName }
+        .onChange(of: appState.currentUserName) { _, new in vm.keyworkerName = new }
+        .sheet(isPresented: $vm.showLogSheet) {
+            MealLogFormView(mealType: vm.selectedMealType)
         }
     }
 
@@ -86,7 +70,7 @@ struct MealLogView: View {
             Text("Today's Menu")
                 .font(.system(size: 16, weight: .bold))
                 .foregroundStyle(AppPalette.orange)
-            let todaysItems = mealPlanItems.filter { $0.dayOfWeek == todayDayOfWeek }
+            let todaysItems = mealPlanItems.filter { $0.dayOfWeek == vm.todayDayOfWeek }
             if todaysItems.isEmpty {
                 Text("No menu planned for today").font(.system(size: 13)).foregroundStyle(AppPalette.textSecondary)
             } else {
@@ -94,7 +78,7 @@ struct MealLogView: View {
                     ForEach(mealTypes, id: \.self) { type in
                         let items = todaysItems.filter { $0.mealType == type }
                         VStack(alignment: .leading, spacing: 4) {
-                            Text(mealTypeLabel(type)).font(.system(size: 11, weight: .bold)).foregroundStyle(AppPalette.textSecondary)
+                            Text(vm.mealTypeLabel(type)).font(.system(size: 11, weight: .bold)).foregroundStyle(AppPalette.textSecondary)
                             ForEach(items) { item in
                                 Text(item.foodItem).font(.system(size: 12))
                                 if !item.allergens.isEmpty {
@@ -119,7 +103,7 @@ struct MealLogView: View {
     }
 
     private var allergenSection: some View {
-        let allergenChildren = myChildren.filter { $0.hasAllergens }
+        let allergenChildren = vm.myChildren(from: allChildren).filter { $0.hasAllergens }
         return Group {
             if !allergenChildren.isEmpty {
                 VStack(alignment: .leading, spacing: 10) {
@@ -148,15 +132,6 @@ struct MealLogView: View {
         }
     }
 
-    func mealTypeLabel(_ type: String) -> String {
-        switch type {
-        case "breakfast":       return "Breakfast"
-        case "morning_snack":   return "AM Snack"
-        case "lunch":           return "Lunch"
-        case "afternoon_snack": return "PM Snack"
-        default:                return type.capitalized
-        }
-    }
 }
 
 struct MealChildCard: View {

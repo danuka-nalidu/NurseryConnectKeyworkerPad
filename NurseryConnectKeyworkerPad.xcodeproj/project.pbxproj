@@ -25,6 +25,10 @@
 		BD4B04A73E361A4019FDE4EA /* AllergenBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A17EFA4C6980807C0A46D1 /* AllergenBanner.swift */; };
 		98DF2A255C992BF3D3EA7092 /* KeyworkerSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E23FEA79240703B6DBC18C7 /* KeyworkerSidebar.swift */; };
 		E80B8E56D6CFE979704BBF76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6162D52C8A2AC8BA7499DE19 /* Assets.xcassets */; };
+		AA11223344556677889900AA /* AttendanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA11223344556677889900AB /* AttendanceViewModel.swift */; };
+		BB11223344556677889900BB /* MealLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB11223344556677889900BC /* MealLogViewModel.swift */; };
+		CC11223344556677889900CC /* DevelopmentTrackerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC11223344556677889900CD /* DevelopmentTrackerViewModel.swift */; };
+		DD11223344556677889900DD /* ReportGeneratorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD11223344556677889900DE /* ReportGeneratorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		FBB17F30AAB4AC45C47C77E2 /* RosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterView.swift; sourceTree = "<group>"; };
 		F8A17EFA4C6980807C0A46D1 /* AllergenBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergenBanner.swift; sourceTree = "<group>"; };
 		5E23FEA79240703B6DBC18C7 /* KeyworkerSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyworkerSidebar.swift; sourceTree = "<group>"; };
+		AA11223344556677889900AB /* AttendanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewModel.swift; sourceTree = "<group>"; };
+		BB11223344556677889900BC /* MealLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealLogViewModel.swift; sourceTree = "<group>"; };
+		CC11223344556677889900CD /* DevelopmentTrackerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentTrackerViewModel.swift; sourceTree = "<group>"; };
+		DD11223344556677889900DE /* ReportGeneratorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportGeneratorViewModel.swift; sourceTree = "<group>"; };
 		6162D52C8A2AC8BA7499DE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56815C9278CAFE364B391BF0 /* NurseryConnectKeyworkerPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NurseryConnectKeyworkerPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA9408D4B743D3A36D148F8E /* NurseryConnectKeyworkerPadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NurseryConnectKeyworkerPadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,11 +114,23 @@
 				3613A240F170F37EFDF30FCB /* ContentView.swift */,
 				6FA8596F72B917AF75F3165C /* NurseryConnectKeyworkerPadApp.swift */,
 				1A8D62EC31D729C223701D32 /* Models */,
+				EE11223344556677889900EE /* ViewModels */,
 				FFE36370E3A2214C4C559326 /* Utilities */,
 				9724D588EDCB72EFDE4F279D /* Views */,
 				6162D52C8A2AC8BA7499DE19 /* Assets.xcassets */,
 			);
 			path = NurseryConnectKeyworkerPad;
+			sourceTree = "<group>";
+		};
+		EE11223344556677889900EE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AA11223344556677889900AB /* AttendanceViewModel.swift */,
+				BB11223344556677889900BC /* MealLogViewModel.swift */,
+				CC11223344556677889900CD /* DevelopmentTrackerViewModel.swift */,
+				DD11223344556677889900DE /* ReportGeneratorViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		1A8D62EC31D729C223701D32 /* Models */ = {
@@ -335,6 +355,10 @@
 				6050B1659A0CD5857B380A5D /* RosterView.swift in Sources */,
 				BD4B04A73E361A4019FDE4EA /* AllergenBanner.swift in Sources */,
 				98DF2A255C992BF3D3EA7092 /* KeyworkerSidebar.swift in Sources */,
+				AA11223344556677889900AA /* AttendanceViewModel.swift in Sources */,
+				BB11223344556677889900BB /* MealLogViewModel.swift in Sources */,
+				CC11223344556677889900CC /* DevelopmentTrackerViewModel.swift in Sources */,
+				DD11223344556677889900DD /* ReportGeneratorViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

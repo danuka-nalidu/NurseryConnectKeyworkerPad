@@ -2,8 +2,13 @@ import SwiftUI
 import SwiftData
 
 struct RosterView: View {
-    @Query(sort: \Child.fullName) private var children: [Child]
+    @Environment(AppState.self) private var appState
+    @Query(sort: \Child.fullName) private var allChildren: [Child]
     @State private var searchText: String = ""
+
+    private var children: [Child] {
+        allChildren.filter { $0.keyworkerName == appState.currentUserName }
+    }
 
     private var filtered: [Child] {
         searchText.isEmpty
